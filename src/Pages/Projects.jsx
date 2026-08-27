@@ -12,22 +12,43 @@ const onSubmitHandler= (event)=>{
 const projects= [{}];
 
 projects.map(project=>{
+
 console.log("it works");
-    project.name= event.name;
-    project.languages;
+ console.log(languages);
+ console.log(project);
 
 })
-console.log(projects);
-console.log(event.name);
+
 }
 
-const languages = [];
+const languages =[] ;
 function languageHandler(event){
 
-languages.unshift(event.value);
-console.log(languages);
+ const newLanguage= {
+        id:crypto.randomUUID(),
+        programe: event.target.value
+
+    };
+
+ const exsists = languages.some(language=>
+        language.programe === newLanguage.programe
+    );
+
+    if(exsists){
+        return languages
+    }else {     
+
+    languages.push(newLanguage);}
+
+ return console.log(languages);
+
+    /* each button has a programe attached to it. everytime a button is clicked, the language handler is run. where it creates a new object with the clicked button info, then takes the declared languages array and adds that to the end of that array. */
+
 
 }
+
+
+
 
 
 
@@ -37,7 +58,7 @@ console.log(languages);
         <form onSubmit={onSubmitHandler}>
 
         <input placeholder='Project Name'
-            //    required 
+              required 
                type="text"
                name="name"
                id="projectName"/>
@@ -45,7 +66,7 @@ console.log(languages);
         <select
             id="status" 
             name="Status"
-            // required
+             required
             
         >       <option value="" disabled selected>Select Status</option>
                 <option value="Complete">Complete</option>
