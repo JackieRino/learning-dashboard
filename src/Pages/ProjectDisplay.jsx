@@ -3,9 +3,9 @@
  export const ProjectDisplay = (props) => {
 return(
     <div id="projectDisplay">
-        <h2>{props.Name}</h2>
-        <p>{props.Languages}</p>
-        <p>{props.Status}</p>
+        <h2>{props.ProjectName}</h2>
+        <p>{props.ProjectLanguages}</p>
+        <p>{props.ProjectStatus}</p>
         {props.children}
     </div>
 

@@ -190,7 +190,12 @@
   border-radius: 5px;
   padding: 4px;
   margin:5px;
+  background-color: inherit;
   
+}
+
+.projectLanguageButton.clicked{
+  background-color: green;
 }
 
 #submitProject{
@@ -207,5 +212,9 @@ margin:10px;
   margin: 20px;
   border: 5px solid white;
   padding: 10px;
-  
+
+}
+
+#projectDisplay{
+  border: 3px solid white;
 }
