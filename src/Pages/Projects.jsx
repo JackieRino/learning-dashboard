@@ -1,163 +1,210 @@
-// import { LanguageButtons } from "./LanguageButtons";
 
-import { useState } from "react";
-import { ProjectDisplay } from "./ProjectDisplay";
+// import { ProjectDisplay } from "./ProjectDisplay";
+// import { LanguageInput } from "./ILanguageInput";
+
+
+
+
 
 // import React from 'react'
 
 
-export const ProjectEntry = (props) => {
-
-
-    const [languages,setLanguages] = useState([]);
-
-
-function languageHandler(event){
-
-
-    event.target.classList.add("clicked");
-    // How do i reset this when the form submits?
-
-
-   
-   
-
- const newLanguage= {
-        id:crypto.randomUUID(),
-        programe: event.target.value,
-        
-
-    };
-
-const exsists = languages.some(language=>
-        language.programe === newLanguage.programe
-    );
-
-    setLanguages(currentLanguages=>{
+// export const ProjectEntry = () => {
 
 
 
-    if(exsists){
-        return currentLanguages
-    }else {     
 
-    return [...currentLanguages,newLanguage];
+// ## DELETE HANDLER
 
+// function handleDelete(project){
+
+
+// setProjects(currentProjects=>
+//     currentProjects.filter(currentObject=>
+      
+//        currentObject.id !== project.id
+
+//     ) 
+// )
+
+// this works.
+// when the button is clicked it runs a handler function that takes a parameter. the parameter is the project where the button was clicked.
+// so i can use the object project inside the function.
+// using it at the onclick with that parameter links that button with the information around where its at so i wont need Keys.
+
+
+
+// ############## EDIT HANDLER
+
+// const editedOn="editOn";
+
+// const editedOff= "editOff";
+
+// function editHandler(project){
+
+//    const newArray=  projects.map(object=>{
+
+// // console.log(project);
+//         if(object.id == project.id && object.edit == "editOff"){
+
+//         return {...project, edit: editedOn
+//         };
+//         }else {
+//             return {...object, edit : editedOff}
+//         }
+
+  
+//     });
+
+//     setProjects(newArray);
+
+
+
+// }
+// // ### POST SAVE language Editor
+
+// //  const langArray= projects.flatMap(project=> project.language);
+// // //  go into projects, and into each object. collect the languages array in each project and compile them into one array.maintaining the objects inside.
+// // //  a variable that only contains an array of the objects that were in language arrays.
+// //   const [Updatedprograme, setUpdatedPrograme]= useState(langArray);
+
+// const langArray = projects.map(project=> project.languages);
+
+//  function langChanger(individualLanguageObject,event){
+    
+// // find the object inside langArray that matches the object at the input
+// // edit that programe
+// // update languages at projects
+
+
+// const theEditedArray =langArray.map(individualLanguageArray=>{
+//     return individualLanguageArray.map(oneLanguageObject=>{
+
+//        if( oneLanguageObject.id == individualLanguageObject.id){
+
+//          return {...oneLanguageObject,programe: event.target.value};
+//        } else {
+//         return oneLanguageObject;
+//        }
+// })
+// });
+
+// const projectsWithEditedLanguage =projects.map((project,index)=> {
+//     return {...project,languages:theEditedArray[index]};
+
+
+// })
+
+// setProjects(projectsWithEditedLanguage);
 
     
-    }})
+     
+// };
 
-    /* each button has a programe attached to it. everytime a button is clicked, the language handler is run. where it creates a new object with the clicked button info, then it checks if that language already exsists inside the the declared languages array, if it does it doesnt add, if it doesnt exsist it adds it to the end of that array. that language array is then stored in state. this logic all exsist inside the undater function*/
 
 
-}
+// // function editedLanguage(){
+// // console.log(projects);
+// //     setProjects(oldProjectsVersion=>
 
-const [projects, setProjects] = useState([]);
+// //             oldProjectsVersion.languages.map(savedLangObject=> 
 
-const onSubmitHandler= (event)=>{
-    event.preventDefault();
-    // stops the browsers default form sumbission when the button is clicked
+// //                 Updatedprograme.map(storedlangObject=>{
+                    
+// //                     if(savedLangObject.id == storedlangObject && savedLangObject.programe !== storedlangObject.programe){
+
+// //                         savedLangObject.programe === storedlangObject.programe;
+
+// //                      return console.log(projects);
+                    
+// //                     } else{
+// //                             return oldProjectsVersion;
+// //                     }
+
+// //  })
+// //           )
+
+// //    );
+// // };
+
+
+
+// // }
+
+
+// // ############## STATUS CHANGER
+
+// function statusChanger(project){
+
+
+
+//     setProjects(oldProjects=>
+//         oldProjects.map(oldObject=>{
+//             if(oldObject.id === project.id){
+
+//                 return { ...oldObject, status:"Incomplete"}
+
+//             } else {
+//                 return oldObject;
+//             }
+//         })
+//     )
+// }
+
+
+
+
+
+
+
+
+
+// return (
+//     
+
+
+{/* //         <button id="delete" onClick= {()=> handleDelete(project)}>Delete</button> */}
+{/* //            writing your onclick this way direclty links the button with the information here so you wont need a key but can just reference what you want.
+//         <button id="edit" onClick={()=>{editHandler(project)}} >Edit</button>
+
+//         <div className= {`editMenu ${project.edit}`}>
+//             <ul>
+//                 <li><button onClick={()=> statusChanger(project)}>Change Status</button></li>
+//                { /*<li><button onClick= {()=>editedLanguage(project)}>confirm</button></li>*/}
+{/* //             </ul>
+//         </div>
+//         </ProjectDisplay> */}
+      
+{/* //       </div> */}
     
-    // create the form information first
-
-    const formInfo= new FormData(event.currentTarget);
-    // take the infromation collected from the form(target) that was targeted by the event(submission) and store it in the variable formInfo
-
-    const infoObject= Object.fromEntries(formInfo);
-    // take the data inside formInfo and store it in the variable infoObject in the formatt of an object.
-
-    infoObject.language= languages;
-
-    setProjects (currentProjects=>
-        [...currentProjects,infoObject]
+{/*       
+//     )}
     
-    )
-    // currentProjects is an array. the last rememeberd version of the array. infoObject is an object thatll get added to that array. 
+//     </div>
+//     {/* access input component value through project.jsx */}
+{/* //  </div> ) */} 
 
-
-// ### resetting section
-    event.currentTarget.reset();
-    setLanguages([]);
-
-    const proButtons= event.currentTarget.elements.namedItem("language");
-    proButtons.forEach(btton=>
-       btton.classList.remove("clicked")
-    );
-    // named items is a RADIONODELIST in an array form like. not sure what that is but if its an array, and each button is an item then the logic above should work. namedItems is a form event property.
-
-    //  the form is reset after the porject state has been updated.
-    // the language state resets as well afger each project occurence.
-console.log(projects);
-}
-
-
-
-  return (
-    <>
-    <h1>Projects</h1>
-    <div id="formEntry">
-        <form onSubmit={onSubmitHandler}>
-
-        <input placeholder='Project Name'
-              required 
-               type="text"
-               name="name"
-               id="projectName"/>
-
-        <select
-            id="status" 
-            name="status"
-             required
-
-            
-        >      <option value="">Select Status</option>
-                <option value="Complete">Complete</option>
-                <option value="In Progress">In Progress</option>
-                <option value="Not Started">Not Started</option>
-
-        </select>
-
-        <br/>
-
-        <button className="projectLanguageButton"  type="button" name="language" value="JavaScript" onClick={languageHandler}>JavaScript</button>
-        <button className="projectLanguageButton" type="button" name="language" value="React" onClick={languageHandler}>React</button>
-        <button className="projectLanguageButton"  type="button" name="language" value="CSS" onClick={languageHandler}>CSS</button>
-        <button className="projectLanguageButton"  type="button" name="language" value="Html" onClick={languageHandler}>Html</button>
-
-{/* when these language buttons are clicked, they create a language array. how do i add that array to the form data? */}
-        <br/>
-        <button type="submit" id="submitProject">Add Project</button>
-      </form>
-      {props.children}
-
-    </div>
-    <div>
-        <h2>kghjgjkg</h2>
-        
-    {projects.map(project=>{
-
-      return (<ProjectDisplay ProjectName={project.name} ProjectLanguages={project.language} ProjectStatus={project.status}/>  )
-
-    })
-    
-}</div>
- </> )
-}
-
-// issues: the form refreshes the page immediately after the form has been submitted. meaning i dont get to see the console at all! fixed. 
-// preventDefault exsists in the context of the event hence the syntax.
 // 
 
-//  formData has methods that are used to access its values and keys
-
-// const formData = new
-// FormData (event.currentTarget)
-// formData.get("the key name youre accessing")
-// this is how you create the form data. only then can you use its methods
 
 
-//  the languages still arent being included
-// still need to create the object project
-// is there any state?
 
-// issue: when the form is submitted whatever project was entered that caused the submission will be included in the next rerender. why? IT WAS THE PLACEMENT OF YOUR CONSOLE.LOG
+
+
+// // issues: the form refreshes the page immediately after the form has been submitted. meaning i dont get to see the console at all! fixed. 
+// // preventDefault exsists in the context of the event hence the syntax.
+// // 
+
+// //  formData has methods that are used to access its values and keys
+
+// // const formData = new
+// // FormData (event.currentTarget)
+// // formData.get("the key name youre accessing")
+// // this is how you create the form data. only then can you use its methods
+
+
+// //  the languages still arent being included
+// // still need to create the object project
+// // is there any state?
+
+// // issue: when the form is submitted whatever project was entered that caused the submission will be included in the next rerender. why? IT WAS THE PLACEMENT OF YOUR CONSOLE.LOG

@@ -3,7 +3,9 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 import './App.css'
-import { ProjectEntry } from './Pages/Projects';
+
+import { ProjectPage } from './Pages/ProjectPage'
+
 
 
 function App() {
@@ -12,9 +14,8 @@ function App() {
     <>
 <div id="dashboardMain" >
     
-      <ProjectEntry/>
+      <ProjectPage/>
   
-
 
 </div>
      

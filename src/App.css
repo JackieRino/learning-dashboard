@@ -185,6 +185,12 @@
 
 
 /* ###################### */
+#projectsDashboard{
+  margin:20px;
+  border: 2px dotted white;
+  height: 25vh;
+  padding: 20px;
+}
 
 .projectLanguageButton{
   border-radius: 5px;
@@ -215,6 +221,74 @@ margin:10px;
 
 }
 
-#projectDisplay{
-  border: 3px solid white;
+.projectDisplay{
+  /* background-color: aqua; */
+  /* border: 3px solid white; */
+ width: 250px;
+ height:300px;
+ margin: 20px;
+ display:block;
+ padding: 10px;
+}
+
+#displayPage{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.programeDisplay{
+  /* border: 5px solid black; */
+  display: inline-block;
+  margin:2px;
+
+}
+
+#delete, #edit{
+  border-radius: 5px;
+  background-color: inherit;
+  
+}
+
+#delete:active, #edit:active{
+  background-color: red;
+  cursor: not-allowed;
+}
+
+
+.Complete{
+
+  #edit{
+    display: none;
+  }
+
+  border: 2px solid green;
+}
+
+
+
+.Incomplete{
+
+  border: 2px solid yellow;
+}
+
+.Pending{
+
+  border: 2px solid red;
+}
+
+.editOn{
+  display: flex;
+}
+
+.editOff{
+  display: none;
+}
+
+.editMenu{
+  border: 5px solid red;
+
+}
+
+.editMenu li{
+  list-style-type: none;
 }
