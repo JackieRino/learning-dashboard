@@ -1,9 +1,12 @@
 import { useLanguageArrayCreator } from "../Hooks/languageArrayCreator";
 import { useInitialFormSubmission } from "../Hooks/initialFormSubmission";
 import { useWhenTheLanguageIsEdited } from "../Hooks/WhenTheLanguageIsEdited";
+import { useShowEditMenu } from "../Hooks/EditMenuOn";
+
 import { ProjectEntryForm } from "./ProjectEntryForm";
  import { ProjectDisplay } from "./ProjectDisplay";
-import { useShowEditMenu } from "../Hooks/EditMenuOn";
+import { DropDownEditMenu } from "./DropDownEditMenu";
+ 
 
 
 
@@ -30,8 +33,11 @@ export const ProjectPage = () => {
 
         <ProjectDisplay Projects={projects}
                         LanguageEditer={languageEditer} 
-                        ToShowEditMenu = {toShowEditMenu}/>
-        
+                        ToShowEditMenu = {toShowEditMenu}
+                        >
+                          <DropDownEditMenu />
+
+        </ProjectDisplay>
 
 
     </div>

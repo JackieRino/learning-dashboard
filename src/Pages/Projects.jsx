@@ -34,29 +34,6 @@
 
 
 
-// ############## EDIT HANDLER
-
-// const editedOn="editOn";
-
-// const editedOff= "editOff";
-
-// function editHandler(project){
-
-//    const newArray=  projects.map(object=>{
-
-// // console.log(project);
-//         if(object.id == project.id && object.edit == "editOff"){
-
-//         return {...project, edit: editedOn
-//         };
-//         }else {
-//             return {...object, edit : editedOff}
-//         }
-
-  
-//     });
-
-//     setProjects(newArray);
 
 
 

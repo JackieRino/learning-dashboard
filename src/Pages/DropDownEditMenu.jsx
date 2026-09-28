@@ -1,11 +1,18 @@
 
 
-export const useProjectEditMenu = () => {
+export const DropDownEditMenu = (props) => {
+
+  const projects = [...props.Projects];
+
+  const project = projects.map(OneObject=> OneObject);
+
   return (
-    <div>
+    <div classname = {`editMenu ${project.edit}`} >
     
-      <button id="deleteButton" onClick>Delete</button>
-      
+       <button>Edit Name</button>
+      <button >Change Status</button>
+      <button>Edit Language</button>
+      <button id="deleteButton" onClick>Delete Project</button>
 
 
     </div>

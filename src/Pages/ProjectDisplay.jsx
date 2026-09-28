@@ -32,11 +32,11 @@ return(
              {/* line 168 on the project.jsx */}
         </div>
 
-        // this is where youll put the edit menue component
+        
     )
 
     }  
-    
+    {props.Children}
   
    
    
