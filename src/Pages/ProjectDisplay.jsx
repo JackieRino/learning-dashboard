@@ -28,8 +28,8 @@ return(
                 }
             })}
             
-             <button id="editMenuButton" onClick={}>⋮</button>
-             {/* line 170 on the project.jsx */}
+              <button id="editMenuButton" onClick={props.ToShowEditMenu }>⋮</button>
+             {/* line 168 on the project.jsx */}
         </div>
 
         // this is where youll put the edit menue component

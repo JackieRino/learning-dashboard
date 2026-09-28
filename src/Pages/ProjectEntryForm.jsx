@@ -52,4 +52,4 @@ export const ProjectEntryForm = (props) => {
 
 
 /* # this code creates the form structure.
-   # the functions for language handler are hooks that are stored in a variable and called at the click events.*/
+   # the functions for language handler and form submission are hooks that are stored in a variable, called at the parent and passed to this child through props.*/
