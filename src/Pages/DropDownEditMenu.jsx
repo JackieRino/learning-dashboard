@@ -1,23 +1,32 @@
 
 
-export const DropDownEditMenu = (props) => {
+export const DropDownEditMenu = () => {
 
-  const projects = [...props.Projects];
-
-  const project = projects.map(OneObject=> OneObject);
 
   return (
-    <div classname = {`editMenu ${project.edit}`} >
+    <>
+
+    {/* {props.Projects.map(OneObject=> {
+
+       if(OneObject.id == props.Project.id){ 
+return( */}
+   <div className = {`editMenu `} >
     
        <button>Edit Name</button>
       <button >Change Status</button>
-      <button>Edit Language</button>
-      <button id="deleteButton" onClick>Delete Project</button>
-
-
+       <button>Edit Language</button>
+      <button id="deleteButton" >Delete Project</button>
     </div>
-  )
-}
+  {/* )}else{
+    return 
+  }}
+
+    )} */}
+
+
+  </>
+  )}
+
 
 {/*
     #your onclick function at the delete button will have to be a hook

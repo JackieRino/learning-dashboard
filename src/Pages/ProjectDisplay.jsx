@@ -1,16 +1,20 @@
 // // import React from 'react'
- import { LanguageEditInputField } from "./ILanguageInput";
+ import { DropDownEditMenu } from "./DropDownEditMenu";
+import { LanguageEditInputField } from "./ILanguageInput";
+ 
 
 
- export const ProjectDisplay = (props) => {
+ export const ProjectDisplay = ( props) => {
  
 
 
 return(
     <div id="displayPage">
     
-      {props.Projects.map(project=>
-    
+      {props.Projects.map(project=>{
+
+        return (
+            <>
         <div className={`projectDisplay ${project.status}`} key= {project.id}>
             <h2>{project.name}</h2>
             <p>{project.status}</p>
@@ -28,23 +32,18 @@ return(
                 }
             })}
             
-              <button id="editMenuButton" onClick={props.ToShowEditMenu }>⋮</button>
+              <button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>⋮</button>
              {/* line 168 on the project.jsx */}
         </div>
+       
+            {
+                project.edit === "editOn" && 
+       <DropDownEditMenu Projects= {props.Projects} 
+                        Project={project}/>
+            }
+        </> )
 
-        
-    )
+      })}
 
-    }  
-    {props.Children}
-  
-   
-   
     </div>
-
-
-)
-
-
- }
-
+      )}

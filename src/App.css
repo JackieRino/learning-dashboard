@@ -234,6 +234,7 @@ margin:10px;
 #displayPage{
   display: flex;
   flex-wrap: wrap;
+  border: 2px solid red;
 }
 
 .programeDisplay{

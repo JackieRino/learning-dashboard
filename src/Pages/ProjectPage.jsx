@@ -5,8 +5,7 @@ import { useShowEditMenu } from "../Hooks/EditMenuOn";
 
 import { ProjectEntryForm } from "./ProjectEntryForm";
  import { ProjectDisplay } from "./ProjectDisplay";
-import { DropDownEditMenu } from "./DropDownEditMenu";
- 
+
 
 
 
@@ -34,10 +33,10 @@ export const ProjectPage = () => {
         <ProjectDisplay Projects={projects}
                         LanguageEditer={languageEditer} 
                         ToShowEditMenu = {toShowEditMenu}
-                        >
-                          <DropDownEditMenu />
+                        />
+                         
 
-        </ProjectDisplay>
+     
 
 
     </div>
