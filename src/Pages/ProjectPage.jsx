@@ -33,6 +33,7 @@ export const ProjectPage = () => {
         <ProjectDisplay Projects={projects}
                         LanguageEditer={languageEditer} 
                         ToShowEditMenu = {toShowEditMenu}
+                        UpdaterFunction={setProjects}
                         />
                          
 

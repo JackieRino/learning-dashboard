@@ -287,9 +287,18 @@ margin:10px;
 
 .editMenu{
   border: 5px solid red;
+  display: flex;
 
 }
 
-.editMenu li{
-  list-style-type: none;
+.editMenu button{
+  border-radius: 2px;
+  margin:2px;
+  background-color: inherit;
+  border: 2px solid grey;
+
+}
+
+.editMenu button:active{
+  background-color: green;
 }

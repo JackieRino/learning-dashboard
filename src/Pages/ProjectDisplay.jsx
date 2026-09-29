@@ -7,7 +7,7 @@ import { LanguageEditInputField } from "./ILanguageInput";
  export const ProjectDisplay = ( props) => {
  
 
-
+props.UpdaterFunction;
 return(
     <div id="displayPage">
     
@@ -34,13 +34,16 @@ return(
             
               <button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>⋮</button>
              {/* line 168 on the project.jsx */}
-        </div>
-       
-            {
+
+             {
                 project.edit === "editOn" && 
        <DropDownEditMenu Projects= {props.Projects} 
-                        Project={project}/>
+                        Project={project}
+                        UpdaterFunction={props.UpdaterFunction}/>
             }
+        </div>
+       
+            
         </> )
 
       })}
