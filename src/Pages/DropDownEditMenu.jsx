@@ -6,15 +6,21 @@ props.Projects;
 props.Project;
 props.UpdaterFunction;
 
-
+function handleDelete(){
+  console.log(props.Project);
+props.UpdaterFunction(currentProjects=>
+    currentProjects.filter(currentObject=>
+      
+       currentObject.id !== props.Project.id
+     )  )
+    }
+    
   return (
     <>
   
    <div className = "editMenu" >
     
-       <button id="editNameButton"  onClick={}>Edit Name</button>
-      <button >Change Status</button>
-      <button id="deleteButton" >Delete Project</button>
+      <button id="deleteButton" onClick={handleDelete} >Delete Project</button>
       <button>Save Edits</button>
     </div>
   

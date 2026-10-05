@@ -2,9 +2,11 @@ import { useLanguageArrayCreator } from "../Hooks/languageArrayCreator";
 import { useInitialFormSubmission } from "../Hooks/initialFormSubmission";
 import { useWhenTheLanguageIsEdited } from "../Hooks/WhenTheLanguageIsEdited";
 import { useShowEditMenu } from "../Hooks/EditMenuOn";
+import { useWhenNameIsEdited } from "../Hooks/WhenNameIsEdited";
 
 import { ProjectEntryForm } from "./ProjectEntryForm";
  import { ProjectDisplay } from "./ProjectDisplay";
+
 
 
 
@@ -16,6 +18,9 @@ export const ProjectPage = () => {
     const {formSubmission,projects,setProjects}= useInitialFormSubmission(languagesState,setLanguagesState);
 
    const languageEditer= useWhenTheLanguageIsEdited(projects, setProjects);
+
+    const nameEditer= useWhenNameIsEdited(projects,setProjects);
+
  
    const toShowEditMenu= useShowEditMenu(projects,setProjects);
 
@@ -34,6 +39,7 @@ export const ProjectPage = () => {
                         LanguageEditer={languageEditer} 
                         ToShowEditMenu = {toShowEditMenu}
                         UpdaterFunction={setProjects}
+                        NameEditer={nameEditer}
                         />
                          
 

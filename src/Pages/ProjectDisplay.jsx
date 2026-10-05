@@ -1,6 +1,7 @@
 // // import React from 'react'
  import { DropDownEditMenu } from "./DropDownEditMenu";
 import { LanguageEditInputField } from "./ILanguageInput";
+import { ProjectNameInputFeild } from "./ProjectNameInputFeild";
  
 
 
@@ -14,9 +15,15 @@ return(
       {props.Projects.map(project=>{
 
         return (
-            <>
+            
         <div className={`projectDisplay ${project.status}`} key= {project.id}>
-            <h2>{project.name}</h2>
+
+           {project.edit== "editon" ? <ProjectNameInputFeild
+
+                    InputName={project.name}
+                    onNameChange={props.NameEditor}/> : <h2>{project.name}</h2>} 
+
+            
             <p>{project.status}</p>
 
              {project.languages.map(oneLanguageObject=>{
@@ -24,7 +31,7 @@ return(
                     return <LanguageEditInputField
                                 key={oneLanguageObject.id}
                                 InputProgram= {oneLanguageObject.program}
-                                OnChangeHandler={props.LanguageEditer}
+                                OnLanguageChange={props.LanguageEditer}
                                 />
                 }else {
                     return <p className="programDisplay" key={oneLanguageObject.id}>{oneLanguageObject.program}</p>
@@ -44,7 +51,7 @@ return(
         </div>
        
             
-        </> )
+        )
 
       })}
 

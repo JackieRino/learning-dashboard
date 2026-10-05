@@ -15,7 +15,7 @@ export const LanguageEditInputField = (props) => {
       <input
                 id="languageEditer"
                             value = {props.InputProgram}
-                            onChange={props.OnChangeHandler}/>
+                            onChange={props.OnLanguageChange}/>
                             
     </div>
   )
