@@ -9,7 +9,6 @@ export function useInitialFormSubmission(languagesState,setLanguagesState) {
     function formSubmission(event) {
 
         event.preventDefault();
-
         const formInfo = new FormData(event.currentTarget);
 
         const infoObject = Object.fromEntries(formInfo);
@@ -31,6 +30,9 @@ export function useInitialFormSubmission(languagesState,setLanguagesState) {
         proButtons.forEach(btton =>
             btton.classList.remove("clicked")
         );
+
+        alert("Project Saved");
+
     }
 
 

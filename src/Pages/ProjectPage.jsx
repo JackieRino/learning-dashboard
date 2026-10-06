@@ -3,9 +3,13 @@ import { useInitialFormSubmission } from "../Hooks/initialFormSubmission";
 import { useWhenTheLanguageIsEdited } from "../Hooks/WhenTheLanguageIsEdited";
 import { useShowEditMenu } from "../Hooks/EditMenuOn";
 import { useWhenNameIsEdited } from "../Hooks/WhenNameIsEdited";
+import { useWhenStatusIsEdited } from "../Hooks/WhenStatusIsEdited";
+import { useToDeleteProject } from "../Hooks/DeleteHook";
+
 
 import { ProjectEntryForm } from "./ProjectEntryForm";
  import { ProjectDisplay } from "./ProjectDisplay";
+
 
 
 
@@ -21,8 +25,10 @@ export const ProjectPage = () => {
 
     const nameEditer= useWhenNameIsEdited(projects,setProjects);
 
+const statusEditer= useWhenStatusIsEdited(projects,setProjects);
  
    const toShowEditMenu= useShowEditMenu(projects,setProjects);
+   const toDeleteProject= useToDeleteProject(setProjects)
 
 
   return (
@@ -40,6 +46,8 @@ export const ProjectPage = () => {
                         ToShowEditMenu = {toShowEditMenu}
                         UpdaterFunction={setProjects}
                         NameEditer={nameEditer}
+                        StatusSubmitter={statusEditer}
+                        DeleteProject={toDeleteProject}
                         />
                          
 

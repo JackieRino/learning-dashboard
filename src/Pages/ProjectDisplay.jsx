@@ -1,8 +1,6 @@
-// // import React from 'react'
- import { DropDownEditMenu } from "./DropDownEditMenu";
 import { LanguageEditInputField } from "./ILanguageInput";
 import { ProjectNameInputFeild } from "./ProjectNameInputFeild";
-import ProjectStatusInputFeild from "./ProjectStatusInputFeild";
+import {ProjectStatusInputFeild} from "./ProjectStatusInputFeild";
 
  
 
@@ -20,13 +18,24 @@ return(
             
         <div className={`projectDisplay ${project.status}`} key= {project.id}>
 
-           {project.edit== "editOn" ? <ProjectNameInputFeild
-
+           {project.edit== "editOn" ? (
+            <>
+                  <ProjectNameInputFeild
                     InputName={project.name}
-                    onNameChange={(event)=>props.NameEditer(event,project)}/> && <ProjectStatusInputFeild/> : <h2>{project.name}</h2>} 
+                    onNameChange={(event)=>props.NameEditer(event,project)}/>
+                                       
+                    <ProjectStatusInputFeild  ProjectBeingEdited={project}
+                                              StatusSubmitter={props.StatusSubmitter}/>
+            </>
+            ): (
+            <>
+                     <h2>{project.name}</h2> 
+                      <p>{project.status}</p> 
+            </>
+          )}  
 
             
-            <p>{project.status}</p>
+           
 
              {project.languages.map(oneLanguageObject=>{
                 if(project.edit == "editOn"){
@@ -41,14 +50,14 @@ return(
                 }
             })}
             
-              <button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>⋮</button>
+              <button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>Click to Edit/ Click to Save</button>
              {/* line 168 on the project.jsx */}
 
              {
                 project.edit === "editOn" && 
-       <DropDownEditMenu Projects= {props.Projects} 
-                        Project={project}
-                        UpdaterFunction={props.UpdaterFunction}/>
+
+<button id="deleteProject" onClick={()=>props.DeleteProject(project)}>Delete Project</button>
+      
             }
         </div>
        
