@@ -6,7 +6,7 @@ export function useShowEditMenu(projects, setProjects){
 const editedOff = "editOff";
 
     function ShowMenu(project){
-        console.log("the button is working")
+        // console.log("the button is working")
         const newArray = projects.map(object=>{
 
             if(object.id == project.id && object.edit == "editOff"){

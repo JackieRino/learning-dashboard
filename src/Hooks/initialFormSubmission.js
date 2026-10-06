@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { useStorage } from "./storageHook";
 
 
 export function useInitialFormSubmission(languagesState,setLanguagesState) {
 
+    const statePostStorage= JSON.parse(localStorage.getItem("allProjects"));
      
-    const [projects, setProjects] = useState([]);
-
+    const [projects, setProjects] = useState(statePostStorage ||[]);
+    
+useStorage(projects);
     function formSubmission(event) {
 
         event.preventDefault();

@@ -15,20 +15,23 @@ import { ProjectEntryForm } from "./ProjectEntryForm";
 
 
 
+
+
 export const ProjectPage = () => {
 
-    const {languageFunction,languagesState,setLanguagesState}= useLanguageArrayCreator();
+  const {languageFunction,languagesState,setLanguagesState}= useLanguageArrayCreator();
 
-    const {formSubmission,projects,setProjects}= useInitialFormSubmission(languagesState,setLanguagesState);
+  const {formSubmission,projects,setProjects}= useInitialFormSubmission(languagesState,setLanguagesState);
 
-   const languageEditer= useWhenTheLanguageIsEdited(projects, setProjects);
+  const languageEditer= useWhenTheLanguageIsEdited(projects, setProjects);
 
-    const nameEditer= useWhenNameIsEdited(projects,setProjects);
+  const nameEditer= useWhenNameIsEdited(projects,setProjects);
 
-const statusEditer= useWhenStatusIsEdited(projects,setProjects);
- 
-   const toShowEditMenu= useShowEditMenu(projects,setProjects);
-   const toDeleteProject= useToDeleteProject(setProjects)
+  const statusEditer= useWhenStatusIsEdited(projects,setProjects);
+  
+  const toShowEditMenu= useShowEditMenu(projects,setProjects);
+  const toDeleteProject= useToDeleteProject(setProjects);
+
 
 
   return (
