@@ -1,49 +1,23 @@
 
 
-// const langArray= [[{id:2,name:"west"},{id:2,name:"west"},{id:2,name:"west"}],[{id:5,name:"green"}]];
-
-// const individualLanguageObject= {id:5};
-
-// const eventObject= {target:{value:"gift"}};
-
-// const something =langArray.map(individualLanguageArray=>{
-//     return individualLanguageArray.map(oneLanguageObject=>{
-
-//        if( oneLanguageObject.id == individualLanguageObject.id){
-//             // update oneLanguageObject
-//           return  {...oneLanguageObject,programe: eventObject.target.value};
 
 
 
-//        }else {
-//         return oneLanguageObject
-//        }
-// })
-// });
-// console.log(something);
+// const projects= [{name:"abby",
+//                  grade:"level One", 
+//                  languages:[{programe:"science" , id:4}
+//                             ,{programe:"english", id:5}]
+//                         },
+                    
+//                     [{name:"grace",
+//                  grade:"level three", 
+//                  languages:[{programe:"math" , id:3}
+//                             ,{programe:"english", id:5}]
+//                         }]]
 
 
+// trying to edit the name
 
-
-const langArray= [[{id:2,name:"west"},{id:2,name:"west"},{id:2,name:"west"}],[{id:5,name:"green"}]];
-
-const individualLanguageObject= {id:5};
-
-const eventObject= {target:{value:"gift"}};
-
-const something =langArray.map(individualLanguageArray=>{
-    return individualLanguageArray.map(oneLanguageObject=>{
-
-       if( oneLanguageObject.id == individualLanguageObject.id){
-            // update oneLanguageObject
-           
-           return {...oneLanguageObject,programe: eventObject.target.value};
-
-          
-
-       }else {
-        return oneLanguageObject
-       }
-})
-});
-console.log(something);
+//   {projects.map{project=>
+    
+//   }}

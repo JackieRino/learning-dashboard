@@ -3,7 +3,7 @@
 export function useWhenTheLanguageIsEdited(projects,setProjects) {
 
     const langArrays = projects.map(project => project.languages);
-
+console.log(langArrays);
     function editTheLanguage(event, oneLangaugeObject) {
 
         const theEditedArray = langArrays.map(oneLanguageArray => {

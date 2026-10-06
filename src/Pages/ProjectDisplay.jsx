@@ -2,6 +2,8 @@
  import { DropDownEditMenu } from "./DropDownEditMenu";
 import { LanguageEditInputField } from "./ILanguageInput";
 import { ProjectNameInputFeild } from "./ProjectNameInputFeild";
+import ProjectStatusInputFeild from "./ProjectStatusInputFeild";
+
  
 
 
@@ -18,10 +20,10 @@ return(
             
         <div className={`projectDisplay ${project.status}`} key= {project.id}>
 
-           {project.edit== "editon" ? <ProjectNameInputFeild
+           {project.edit== "editOn" ? <ProjectNameInputFeild
 
                     InputName={project.name}
-                    onNameChange={props.NameEditor}/> : <h2>{project.name}</h2>} 
+                    onNameChange={(event)=>props.NameEditer(event,project)}/> && <ProjectStatusInputFeild/> : <h2>{project.name}</h2>} 
 
             
             <p>{project.status}</p>
@@ -31,7 +33,7 @@ return(
                     return <LanguageEditInputField
                                 key={oneLanguageObject.id}
                                 InputProgram= {oneLanguageObject.program}
-                                OnLanguageChange={props.LanguageEditer}
+                                OnLanguageChange={(event)=>props.LanguageEditer(event,oneLanguageObject)}
                                 />
                 }else {
                     return <p className="programDisplay" key={oneLanguageObject.id}>{oneLanguageObject.program}</p>
