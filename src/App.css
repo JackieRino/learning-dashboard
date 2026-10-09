@@ -339,4 +339,10 @@ table{
   font-size: small;
 }
 
+#languageListAtDisplay{
+  /* display: flex;
+  justify-content: flex-end;
+  margin: 2px; */
+  /* border:2px solid pink; */
+}
 }
