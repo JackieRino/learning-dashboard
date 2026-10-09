@@ -186,10 +186,11 @@
 
 /* ###################### */
 #projectsDashboard{
-  margin:20px;
+  margin:5px;
+  margin-bottom: 15px;
   border: 2px dotted white;
   height: 25vh;
-  padding: 20px;
+  padding: 10px;
 }
 
 .projectLanguageButton{
@@ -215,9 +216,9 @@ margin:10px;
 
 #formEntry{
   display: block;
-  margin: 20px;
+  margin: 10px;
   border: 5px solid white;
-  padding: 10px;
+  padding: 5px;
 
 }
 
