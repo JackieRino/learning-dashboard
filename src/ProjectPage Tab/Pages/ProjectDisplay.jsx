@@ -27,12 +27,15 @@ return(
 
      {project.edit== "editOn" ? (
             <>
+            <td>
                   <ProjectNameInputFeild
                     InputName={project.name}
                     onNameChange={(event)=>props.NameEditer(event,project)}/>
-                                       
+              </td> 
+              <td>                        
                     <ProjectStatusInputFeild  ProjectBeingEdited={project}
                                               StatusSubmitter={props.StatusSubmitter}/>
+                </td>
             </>
             ): (
             <>                        
@@ -44,6 +47,7 @@ return(
 
                         <td>
                             <ul id="languageListAtDisplay">
+
                         {project.languages.map(oneLanguageObject=>{
                             if(project.edit == "editOn"){
                     return <LanguageEditInputField
@@ -99,10 +103,10 @@ return(
 
             
            
-
+            <ul id="languageInputdisplay">
              {project.languages.map(oneLanguageObject=>{
                 if(project.edit == "editOn"){
-                    return <LanguageEditInputField
+                    return  <LanguageEditInputField
                                 key={oneLanguageObject.id}
                                 InputProgram= {oneLanguageObject.program}
                                 OnLanguageChange={(event)=>props.LanguageEditer(event,oneLanguageObject)}
@@ -112,7 +116,7 @@ return(
 
                 }
             })}
-            
+            </ul>
               <button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>Click to Edit/ Click to Save</button>
              {/* line 168 on the project.jsx */}
 

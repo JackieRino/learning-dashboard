@@ -348,3 +348,7 @@ display: block;
 display: none;
 }
 }
+
+ul li{
+  list-style-type: none;
+}

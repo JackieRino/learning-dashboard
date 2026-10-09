@@ -3,8 +3,9 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 import './App.css'
+import { ProjectPage } from './ProjectPage Tab/Pages/ProjectHomePage'
 
-import { ProjectPage } from './Pages/ProjectPage'
+
 
 
 

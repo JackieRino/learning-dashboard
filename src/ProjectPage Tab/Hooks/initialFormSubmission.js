@@ -9,9 +9,15 @@ export function useInitialFormSubmission(languagesState,setLanguagesState) {
     const [projects, setProjects] = useState(statePostStorage ||[]);
     
 useStorage(projects);
-    function formSubmission(event) {
 
+
+    function formSubmission(event) { 
         event.preventDefault();
+if(languagesState.length===0){
+     alert("Please select atleast one programe.") 
+     return;
+    }else{
+       
         const formInfo = new FormData(event.currentTarget);
 
         const infoObject = Object.fromEntries(formInfo);
@@ -33,9 +39,9 @@ useStorage(projects);
         proButtons.forEach(btton =>
             btton.classList.remove("clicked")
         );
-
+    
         alert("Project Saved");
-
+    }
     }
 
 
