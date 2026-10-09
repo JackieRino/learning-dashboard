@@ -12,6 +12,8 @@ props.UpdaterFunction;
 return(
 <> 
 
+{/* Laptop Layout */}
+<div className="desktopLayout" >
 <table className="table">
                 <thead>
                     <tr>
@@ -67,9 +69,10 @@ return(
                 )}
                 </tbody>
             </table>
+</div>
 
-
- 
+ {/* Phone Layout */}
+ <div className="mobileLayout">
     <div id="displayPage">
     
       {props.Projects.map(project=>{
@@ -130,6 +133,6 @@ return(
       })}
 
     </div>
-
+</div>
     </>
       )}

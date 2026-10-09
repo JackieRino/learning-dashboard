@@ -8,8 +8,8 @@ import { useToDeleteProject } from "../Hooks/DeleteHook";
 
 
 import { ProjectEntryForm } from "./ProjectEntryForm";
-//  import { ProjectDisplay } from "./ProjectDisplay";
-import { TestDisplay } from "./test";
+ import { ProjectDisplay } from "./ProjectDisplay";
+// import { TestDisplay } from "./test";
  
 
 
@@ -46,7 +46,7 @@ export const ProjectPage = () => {
                 
                 {/* THE DISPLAY */}
 
-        {/* <ProjectDisplay Projects={projects}
+         <ProjectDisplay Projects={projects}
                         LanguageEditer={languageEditer} 
                         ToShowEditMenu = {toShowEditMenu}
                         UpdaterFunction={setProjects}
@@ -54,15 +54,15 @@ export const ProjectPage = () => {
                         StatusSubmitter={statusEditer}
                         DeleteProject={toDeleteProject}
                         />
-                          */}
-<TestDisplay Projects={projects}
+                          
+{/* <TestDisplay Projects={projects}
                         LanguageEditer={languageEditer} 
                         ToShowEditMenu = {toShowEditMenu}
                         UpdaterFunction={setProjects}
                         NameEditer={nameEditer}
                         StatusSubmitter={statusEditer}
                         DeleteProject={toDeleteProject}
-                        />
+                        /> */}
      
 
 
