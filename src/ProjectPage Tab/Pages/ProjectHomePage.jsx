@@ -8,9 +8,8 @@ import { useToDeleteProject } from "../Hooks/DeleteHook";
 
 
 
-import { ProjectEntryForm } from "./ProjectPage Tab/Pages/ProjectEntryForm";
- './ProjectPage Tab/Pages/ProjectHomePage'
- import { ProjectDisplay } from "./ProjectPage Tab/Pages/ProjectDisplay";
+import { ProjectEntryForm } from "./ProjectEntryForm";
+ import { ProjectDisplay } from "./ProjectDisplay";
 // import { TestDisplay } from "./test";
  
 
