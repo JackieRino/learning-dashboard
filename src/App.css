@@ -7,7 +7,7 @@
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px; */
-
+/* 
   &:hover {
     border-color: var(--accent-border);
   }
@@ -181,7 +181,7 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
+} */
 
 
 /* ###################### */
@@ -232,8 +232,8 @@ margin:10px;
 }
 
 #displayPage{
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   border: 2px solid red;
 }
 
@@ -301,4 +301,23 @@ margin:10px;
 
 .editMenu button:active{
   background-color: green;
+}
+
+#languageListAtDisplay li{
+     list-style-type: none;
+     margin:3px;
+     padding:2px;
+     flex-direction:column;
+     border: 1px solid yellow;
+
+}
+
+#languageListAtDisplay{
+  display: flex;
+  justify-content: flex-end;
+  margin: 2px;
+  border:2px solid pink;
+}
+.table{
+  width:100%;
 }

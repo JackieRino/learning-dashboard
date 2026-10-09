@@ -12,12 +12,11 @@ function App() {
   // const [something, setSomething]= useState();
   return (
     <>
-<div id="dashboardMain" >
     
       <ProjectPage/>
   
 
-</div>
+
      
     </>
   )

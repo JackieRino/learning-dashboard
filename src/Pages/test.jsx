@@ -5,17 +5,70 @@ import {ProjectStatusInputFeild} from "./ProjectStatusInputFeild";
  
 
 
- export const ProjectDisplay = ( props) => {
+ export const TestDisplay = ( props) => {
  
 
 props.UpdaterFunction;
 return(
+<> 
+
+<table className="table">
+                <thead>
+                    <tr>
+                    <th>Project Name</th>
+                    <th>Status</th>
+                    <th>Programes</th>
+                    </tr>
+                </thead>
+                <tbody>
+             {props.Projects.map(project=>   
+                    <tr>
+
+     {project.edit== "editOn" ? (
+            <>
+                  <ProjectNameInputFeild
+                    InputName={project.name}
+                    onNameChange={(event)=>props.NameEditer(event,project)}/>
+                                       
+                    <ProjectStatusInputFeild  ProjectBeingEdited={project}
+                                              StatusSubmitter={props.StatusSubmitter}/>
+            </>
+            ): (
+            <>                        
+                        <td>{project.name}</td>
+                        <td>{project.status}</td>
+
+                        </>
+                        )}
+
+                        <td>
+                            <ul id="languageListAtDisplay">
+                        {project.languages.map(oneLanguageObject=>{
+                            if(project.edit == "editOn"){
+                    return <LanguageEditInputField
+                                key={oneLanguageObject.id}
+                                InputProgram= {oneLanguageObject.program}
+                                OnLanguageChange={(event)=>props.LanguageEditer(event,oneLanguageObject)}
+                                />}else{
+                            return <li key={oneLanguageObject.id}>{oneLanguageObject.program}</li>}
+      })}
+                            </ul>
+                        </td>
+                        <td><button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>Click to Edit/ Click to Save</button></td>
+                    </tr>
+                )}
+                </tbody>
+            </table>
+
+
+ 
     <div id="displayPage">
     
       {props.Projects.map(project=>{
 
         return (
-            
+                   
+
         <div className={`projectDisplay ${project.status}`} key= {project.id}>
 
            {project.edit== "editOn" ? (
@@ -61,13 +114,14 @@ return(
             }
         </div>
        
+
+       
             
         )
 
       })}
 
     </div>
+
+    </>
       )}
-
-
-      

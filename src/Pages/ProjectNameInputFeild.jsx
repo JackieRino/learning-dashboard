@@ -2,13 +2,19 @@
 
 export const ProjectNameInputFeild = (props) => {
   return (
-    <div>
+    <td>
       <input 
             id="nameEditer"
             value={props.InputName}
             onChange={props.onNameChange}/>
-    </div>
+    </td>
   )
 }
 
 
+//  <div>
+//       <input 
+//             id="nameEditer"
+//             value={props.InputName}
+//             onChange={props.onNameChange}/>
+//     </div>
