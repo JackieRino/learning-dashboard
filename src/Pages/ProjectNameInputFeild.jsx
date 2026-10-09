@@ -12,9 +12,3 @@ export const ProjectNameInputFeild = (props) => {
 }
 
 
-//  <div>
-//       <input 
-//             id="nameEditer"
-//             value={props.InputName}
-//             onChange={props.onNameChange}/>
-//     </div>

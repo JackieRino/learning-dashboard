@@ -22,7 +22,7 @@ return(
                 </thead>
                 <tbody>
              {props.Projects.map(project=>   
-                    <tr>
+                    <tr className={`projectDisplay ${project.status}`} key={project.id}>
 
      {project.edit== "editOn" ? (
             <>
@@ -35,7 +35,7 @@ return(
             </>
             ): (
             <>                        
-                        <td>{project.name}</td>
+                        <td id="nameDisplay">{project.name}</td>
                         <td>{project.status}</td>
 
                         </>
@@ -54,7 +54,15 @@ return(
       })}
                             </ul>
                         </td>
-                        <td><button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>Click to Edit/ Click to Save</button></td>
+                        <td>
+                            <button id="editMenuButton" onClick={()=>{props.ToShowEditMenu(project)} }>Click to Edit/ Click to Save</button>
+                            <br/>
+                            { project.edit === "editOn" &&   
+                        <button id="deleteProject" onClick={()=>props.DeleteProject(project)}>Delete Project</button>
+                       }
+                            </td>
+
+                       
                     </tr>
                 )}
                 </tbody>

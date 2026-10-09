@@ -11,13 +11,13 @@ export const LanguageEditInputField = (props) => {
     
 
   return (
-    <div>
+    <li>
       <input
                 id="languageEditer"
                             value = {props.InputProgram}
                             onChange={props.OnLanguageChange}/>
                             
-    </div>
+    </li>
   )
 }
 
