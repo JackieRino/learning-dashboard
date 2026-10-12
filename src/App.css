@@ -205,6 +205,8 @@
   background-color: green;
 }
 
+
+
 #submitProject{
   border-radius: 2px;
   
@@ -351,4 +353,21 @@ display: none;
 
 ul li{
   list-style-type: none;
+}
+
+/* Page css */
+
+.navButton{
+  border:2px solid white;
+  border-radius: 5px;
+  padding: 2px;
+  margin:5px;
+}
+
+
+.navButton:active{
+  background-color: green;
+}
+#ProjectHomePage{
+  display:none;
 }

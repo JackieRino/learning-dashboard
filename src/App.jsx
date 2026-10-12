@@ -3,24 +3,17 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 import './App.css'
-import { ProjectPage } from './ProjectPage Tab/Pages/ProjectHomePage'
+import { NavLogic } from './NavLogic';
 
 
 
 
 
-function App() {
-  // const [something, setSomething]= useState();
-  return (
-    <>
-    
-      <ProjectPage/>
-  
 
-
-     
-    </>
-  )
+function App(){
+ return <>
+ <NavLogic/>
+ </> 
 }
 
 export default App
