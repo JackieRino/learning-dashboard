@@ -12,7 +12,13 @@ import { NavLogic } from './NavLogic';
 
 function App(){
  return <>
+
+ <h1>Learning DashBoard</h1>
+  
  <NavLogic/>
+ 
+
+
  </> 
 }
 

@@ -365,9 +365,18 @@ ul li{
 }
 
 
-.navButton:active{
-  background-color: green;
+.navButton .statistics{
+  color:black;
 }
 #ProjectHomePage{
   display:none;
+}
+
+button:active{
+  background-color: green;
+}
+
+#appNavigation{
+  margin-bottom: 20px;
+  border: 5px solid green;
 }
