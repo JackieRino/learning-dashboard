@@ -11,7 +11,7 @@ export const ProjectEntryForm = (props) => {
     return (
 
         <div id="projectsDashboard">
-            <h2>Projects</h2>
+            <h1>Projects</h1>
             <div id="formEntry">
                 <form onSubmit={props.FormSubmission}>
 

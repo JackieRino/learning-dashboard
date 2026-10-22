@@ -8,7 +8,7 @@ import { ConceptsHomePage } from './Concepts Tab/ConceptsHomePage';
 import Home from './Home Tab/Home'
 import { NotesHomePage } from './Notes Tab/NotesHomePage';
 import { ProjectPage } from './ProjectPage Tab/Pages/ProjectHomePage';
-import { StatisticsHomePage } from './Statistics Tab/StatisticsHomePage';
+import { StatNavLogic } from './Statistics Tab/StatNavLogic';
 
 
 
@@ -19,7 +19,7 @@ export function NavLogic() {
   
   const homePage= <Home/>;
   const projectPage= <ProjectPage/>;
-  const statisticsPage= <StatisticsHomePage/>;
+  const statisticsPage= <StatNavLogic/>;
   const conceptsPage= <ConceptsHomePage/>;
   const notesPage= <NotesHomePage/>;
 
